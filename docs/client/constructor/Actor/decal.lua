@@ -1,3 +1,5 @@
+---@class Decal
+
 ---Creates a new Decal actor in the world
 ---@param Location FVector World position
 ---@param Rotation FRotator World orientation
