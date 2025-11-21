@@ -358,8 +358,8 @@
                                 description += (description ? " " : "") + comment;
                             }
                         } else if (line.startsWith("function")) {
-                            // Function declaration
-                            const funcMatch = line.match(/function\s+(?:(\w+)\.)?(\w+)\s*\((.*?)\)/);
+                            // Function declaration - handle Class.method, Class:method, and standalone
+                            const funcMatch = line.match(/function\s+(?:(\w+)[\.:])??(\w+)\s*\((.*?)\)/);
                             if (funcMatch) {
                                 const [, className, funcName, params] = funcMatch;
 
